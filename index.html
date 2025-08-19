@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Recetas PWA</title>
+  <link rel="manifest" href="./public/manifest.json">
+  <meta name="theme-color" content="#4CAF50">
+  <link rel="icon" href="./public/icon-192.png">
+  <script type="module" src="./components/receta-card.js"></script>
+  <script type="module" src="./src/app.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #e0ffe0 0%, #b2f7ef 100%);
+      margin: 0;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      color: #388e3c;
+      margin-top: 1.5em;
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 8px #fff8;
+    }
+    #form-section {
+      display: flex;
+      justify-content: center;
+      margin: 2em 0 1em 0;
+    }
+    #form-receta {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px #0002;
+      padding: 1.5em 2em;
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    #form-receta input {
+      border: 1px solid #b2f7ef;
+      border-radius: 6px;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      outline: none;
+      transition: border 0.2s;
+    }
+    #form-receta input:focus {
+      border: 1.5px solid #388e3c;
+    }
+    #form-receta button {
+      background: linear-gradient(90deg, #4CAF50 60%, #388e3c 100%);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.7em 1.5em;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #0001;
+      transition: background 0.2s;
+    }
+    #form-receta button:hover {
+      background: linear-gradient(90deg, #388e3c 60%, #4CAF50 100%);
+    }
+    #app {
+      max-width: 600px;
+      margin: 0 auto 2em auto;
+      padding: 0 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Gestor de Recetas</h1>
+  <section id="form-section">
+    <form id="form-receta">
+      <input type="text" id="nombre" placeholder="Nombre de la receta" required />
+      <input type="text" id="ingredientes" placeholder="Ingredientes" required />
+      <input type="text" id="pasos" placeholder="Pasos" required />
+      <button type="submit">Agregar Receta</button>
+    </form>
+  </section>
+  <main id="app"></main>
+</body>
+</html>
