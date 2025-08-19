@@ -47,4 +47,4 @@ Esta aplicación es un gestor de recetas de cocina desarrollado como una Progres
 ---
 
 ## Créditos
-Desarrollado por [Tu Nombre].
+Desarrollado por Darwin Toapanta.
